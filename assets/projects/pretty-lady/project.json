@@ -1,0 +1,42 @@
+{
+  "id": "pretty-lady",
+  "title": "Pretty Lady",
+  "slug": "pretty-lady",
+  "category": "Brand Identity",
+  "summary": "Elegant beauty brand identity built around feminine visuals, refined typography, and a soft premium presentation style.",
+  "coverImage": "image1.png",
+  "gallery": [
+    "image1.png",
+    "image2.png",
+    "image3.png"
+  ],
+  "challenge": "Create a beauty identity that feels polished and approachable while maintaining enough flexibility for packaging and digital use.",
+  "solution": "Developed a refined visual system with delicate typography, clean layouts, and a consistent aesthetic for brand applications.",
+  "role": [
+    "Logo Design",
+    "Visual Identity",
+    "Packaging Direction",
+    "Brand Presentation"
+  ],
+  "deliverables": [
+    "Logo Design",
+    "Brand Identity",
+    "Packaging Concepts",
+    "Social Media Assets",
+    "Mockup Presentation"
+  ],
+  "software": [
+    "Adobe Illustrator",
+    "Adobe Photoshop"
+  ],
+  "tags": [
+    "Branding",
+    "Beauty",
+    "Packaging",
+    "Identity Design"
+  ],
+  "featured": true,
+  "order": 6,
+  "status": "published",
+  "pdf": null
+}

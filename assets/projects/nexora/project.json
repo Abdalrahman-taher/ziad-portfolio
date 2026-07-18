@@ -1,0 +1,44 @@
+{
+  "id": "nexora",
+  "title": "Nexora",
+  "slug": "nexora",
+  "category": "Brand Identity",
+  "summary": "Modern technology brand identity designed around a sharp visual language, confident typography, and a scalable digital-first system.",
+  "coverImage": "image1.png",
+  "gallery": [
+    "image1.png",
+    "image2.png",
+    "image3.png",
+    "image4.png",
+    "image5.png"
+  ],
+  "challenge": "Create a technology identity that feels credible, clean, and adaptable across brand, product, and marketing touchpoints.",
+  "solution": "Built a structured identity system with a clear logo direction, modern layouts, and consistent visual rules for future brand use.",
+  "role": [
+    "Brand Strategy",
+    "Logo Design",
+    "Visual Identity",
+    "Brand Presentation"
+  ],
+  "deliverables": [
+    "Logo Design",
+    "Brand Identity",
+    "Visual System",
+    "Brand Mockups",
+    "Presentation Assets"
+  ],
+  "software": [
+    "Adobe Illustrator",
+    "Adobe Photoshop"
+  ],
+  "tags": [
+    "Branding",
+    "Technology",
+    "Logo Design",
+    "Identity Design"
+  ],
+  "featured": true,
+  "order": 4,
+  "status": "published",
+  "pdf": null
+}

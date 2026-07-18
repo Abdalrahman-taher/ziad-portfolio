@@ -1,0 +1,40 @@
+{
+  "id": "red-bull",
+  "title": "Red Bull",
+  "slug": "red-bull",
+  "category": "Rebranding Concept",
+  "summary": "Independent rebranding concept exploring a refreshed visual direction for an energy drink brand with bold and dynamic presentation.",
+  "coverImage": "image1.png",
+  "gallery": [
+    "image1.png",
+    "image2.png"
+  ],
+  "challenge": "Reimagine a familiar beverage brand in a way that feels energetic, modern, and suitable for campaign-led visual communication.",
+  "solution": "Created a concept direction using high-impact layouts, strong contrast, and expressive brand visuals for digital and print touchpoints.",
+  "role": [
+    "Concept Development",
+    "Rebranding",
+    "Art Direction",
+    "Visual Design"
+  ],
+  "deliverables": [
+    "Rebranding Concept",
+    "Campaign Visuals",
+    "Mockup Presentation",
+    "Brand Applications"
+  ],
+  "software": [
+    "Adobe Photoshop",
+    "Adobe Illustrator"
+  ],
+  "tags": [
+    "Rebranding",
+    "Beverage",
+    "Campaign",
+    "Concept Design"
+  ],
+  "featured": true,
+  "order": 7,
+  "status": "published",
+  "pdf": null
+}

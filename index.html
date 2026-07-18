@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Creative Brand Designer</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500&family=JetBrains+Mono:wght@400&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="assets/css/style.css">
+</head>
+
+<body>
+
+    <div class="loading-screen" id="loadingScreen">
+        <div class="loading-counter">
+            <span class="counter-number" id="counterNumber">0</span>
+            <span class="counter-symbol">%</span>
+        </div>
+    </div>
+
+    <!-- Custom Cursor -->
+    <div class="custom-cursor" id="cursor"></div>
+
+    <!-- Navigation -->
+    <nav class="navigation" id="navigation">
+        <div class="navigation__logo">
+            <span>Ziad Ahmed</span>
+        </div>
+        <div class="navigation__menu">
+            <a href="#projects" class="navigation__link" data-hover>Work</a>
+            <a href="#about" class="navigation__link" data-hover>About</a>
+            <a href="#contact" class="navigation__link" data-hover>Contact</a>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <main class="main-content">
+
+        <!-- Hero Section (01) -->
+        <section class="hero section" id="hero" data-section="01">
+            <div class="container">
+                <div class="hero__content">
+                    <span class="section-number">01</span>
+                    <h1 class="hero__headline">
+                        <span class="hero__line" data-reveal>Creative</span>
+                        <span class="hero__line hero__line--offset" data-reveal>Brand</span>
+                        <span class="hero__line" data-reveal>Designer</span>
+                    </h1>
+                    <p class="hero__subtitle">Designing memorable brands through strategy, identity,
+                        and visual storytelling.
+                    </p>
+                    <a href="#projects" class="cta cta--primary" data-hover>View Selected Work</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Introduction (02) -->
+        <section class="introduction section" id="introduction" data-section="02">
+            <div class="container container--narrow">
+                <span class="section-number">02</span>
+                <h2>Creative Brand Designer</h2>
+                <p class="introduction__text">
+                    Ziad Ahmed is a Creative Brand Designer specializing in brand identity, logo design, advertising
+                    campaigns, typography, packaging, and visual communication. He works with businesses to build clear,
+                    memorable brands and delivers projects from concept to final presentation.
+                </p>
+            </div>
+        </section>
+
+        <!-- Featured Projects (03) -->
+        <section class="featured-projects section" id="projects" data-section="03">
+            <div class="container">
+                <div class="section-header">
+                    <span class="section-number">03</span>
+                    <h2 class="section-title">Selected Work</h2>
+                </div>
+
+                <div class="projects-grid" id="projectsGrid">
+                    <!-- Projects will be loaded dynamically from assets/projects -->
+                </div>
+
+            </div>
+
+        </section>
+
+        <!-- Creative Process (04) -->
+        <section class="creative-process section" id="process" data-section="04">
+            <div class="container">
+                <div class="section-header">
+                    <span class="section-number">04</span>
+                    <h2 class="section-title">Approach</h2>
+                </div>
+
+                <div class="process-timeline">
+                    <div class="timeline-item">
+                        <span class="timeline-item__number">01</span>
+                        <div class="timeline-item__content">
+                            <h3 class="timeline-item__title">Listen</h3>
+                            <p class="timeline-item__description">Deep dive into your vision,
+                                market, and aspirations.</p>
+                        </div>
+                    </div>
+                    <div class="timeline-item">
+                        <span class="timeline-item__number">02</span>
+                        <div class="timeline-item__content">
+                            <h3 class="timeline-item__title">Define</h3>
+                            <p class="timeline-item__description">Clarify positioning, audience, and
+                                strategic goals.</p>
+                        </div>
+                    </div>
+                    <div class="timeline-item">
+                        <span class="timeline-item__number">03</span>
+                        <div class="timeline-item__content">
+                            <h3 class="timeline-item__title">Create</h3>
+                            <p class="timeline-item__description">Translate strategy into compelling
+                                visual systems.</p>
+                        </div>
+                    </div>
+                    <div class="timeline-item">
+                        <span class="timeline-item__number">04</span>
+                        <div class="timeline-item__content">
+                            <h3 class="timeline-item__title">Refine</h3>
+                            <p class="timeline-item__description">Iterate with precision until every
+                                detail aligns.</p>
+                        </div>
+                    </div>
+                    <div class="timeline-item">
+                        <span class="timeline-item__number">05</span>
+                        <div class="timeline-item__content">
+                            <h3 class="timeline-item__title">Deliver</h3>
+                            <p class="timeline-item__description">Handoff complete system with
+                                implementation support.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Capabilities (05) -->
+        <section class="capabilities section" id="capabilities" data-section="05">
+            <div class="container">
+                <div class="section-header">
+                    <span class="section-number">05</span>
+                    <h2 class="section-title">Capabilities</h2>
+                </div>
+
+                <div class="capabilities-grid">
+                    <div class="capability-item">
+                        <span class="capability-item__number">01</span>
+                        <h3 class="capability-item__title">Brand Identity</h3>
+                    </div>
+                    <div class="capability-item">
+                        <span class="capability-item__number">02</span>
+                        <h3 class="capability-item__title">Logo Design</h3>
+                    </div>
+                    <div class="capability-item">
+                        <span class="capability-item__number">03</span>
+                        <h3 class="capability-item__title">Advertising Campaigns</h3>
+                    </div>
+                    <div class="capability-item">
+                        <span class="capability-item__number">04</span>
+                        <h3 class="capability-item__title">Typography</h3>
+                    </div>
+                    <div class="capability-item">
+                        <span class="capability-item__number">05</span>
+                        <h3 class="capability-item__title">Packaging</h3>
+                    </div>
+                    <div class="capability-item">
+                        <span class="capability-item__number">06</span>
+                        <h3 class="capability-item__title">UI Concepts</h3>
+                    </div>
+                    <div class="capability-item">
+                        <span class="capability-item__number">07</span>
+                        <h3 class="capability-item__title">Visual Communication</h3>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- About (06) -->
+        <section class="about section" id="about" data-section="06">
+            <div class="container">
+                <span class="section-number">06</span>
+
+                <div class="about__grid">
+                    <div class="about__portrait">
+                        <img src="assets/images/profile/personal-photo.png" alt="Ziad Ahmed portrait"
+                            class="portrait-placeholder">
+                    </div>
+
+                    <div class="about__content">
+                        <h2 class="about__title">About</h2>
+                        <p class="about__bio">
+                            I'm Ziad Ahmed, a Creative Brand Designer based in Shebin El-Kom, Egypt. I specialize in
+                            creating brand identities, logo systems, advertising campaigns, packaging, typography, and
+                            UI concepts. I enjoy transforming ideas into meaningful visual experiences while helping
+                            brands communicate with clarity, consistency, and confidence. </p>
+
+                        <!-- Timeline -->
+                        <div class="about__timeline">
+                            <h3 class="about__subsection-title">Experience</h3>
+                            <div class="timeline-entry">
+                                <span class="timeline-entry__year">2024 — Present</span>
+                                <p class="timeline-entry__role">Freelance Graphic Designer</p>
+                                <ul class="timeline-entry__list">
+                                    <li>Brand Identity</li>
+                                    <li>Logo Design</li>
+                                    <li>Advertising Campaigns</li>
+                                    <li>Client Presentations</li>
+                                </ul>
+                            </div>
+                            <div class="timeline-entry">
+                                <span class="timeline-entry__year">Personal Projects</span>
+                                <ul class="timeline-entry__list">
+                                    <li>Basata</li>
+                                    <li>VEXA</li>
+                                    <li>Nexora</li>
+                                    <li>Pretty Lady</li>
+                                </ul>
+                            </div>
+                        </div>
+
+                        <!-- Software -->
+                        <div class="about__software">
+                            <h3 class="about__subsection-title">Tools</h3>
+                            <div class="software-grid">
+                                <span class="software-item">Figma</span>
+                                <span class="software-item">Adobe Photoshop</span>
+                                <span class="software-item">Adobe Illustrator</span>
+                                <span class="software-item">Canva</span>
+                                <span class="software-item">Affinity Designer</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact (07) -->
+        <section class="contact section" id="contact" data-section="07">
+            <div class="container container--narrow">
+                <span class="section-number">07</span>
+
+                <div class="contact__content">
+                    <h2 class="contact__title">Let's Build Your Brand</h2>
+                    <p class="contact__subtitle">Available for freelance projects, branding, and
+                        creative collaborations.
+                    </p>
+
+                    <a href="tel:+201024265962" class="contact__email" data-hover>+20 102 426 5962</a>
+
+                    <div class="contact__social">
+                        <a href="tel:+201024265962" class="social-link" data-hover>Phone</a>
+                        <a href="https://wa.me/201024265962" class="social-link" data-hover>WhatsApp</a>
+                        <a href="mailto:ziadahmed56000@gmail.com" class="social-link" data-hover>Email</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Footer (08) -->
+    <footer class="footer" id="footer" data-section="08">
+        <div class="container">
+            <div class="footer__content">
+                <span class="footer__copyright">© 2026 Ziad Ahmed. All Rights Reserved.</span>
+                <a href="#hero" class="footer__back-to-top" data-hover>Back to Top ↑</a>
+            </div>
+        </div>
+    </footer>
+
+</body>
+<script src="assets/js/script.js"></script>
+
+</html>

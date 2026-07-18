@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Project</title>
+    <link rel="stylesheet" href="assets/css/style.css">
+</head>
+
+<body class="project-page">
+    <main class="project-main">
+        <section class="project-gallery-section" aria-label="Project gallery">
+            <div class="container">
+                <div class="project-gallery" id="projectGallery">
+                    <button type="button" class="project-gallery__button project-gallery__button--prev"
+                        id="projectGalleryPrev" aria-label="Previous project image">
+                        &larr;
+                    </button>
+
+                    <div class="project-gallery__frame">
+                        <img id="projectGalleryImage" class="project-gallery__image" alt="">
+                    </div>
+
+                    <button type="button" class="project-gallery__button project-gallery__button--next"
+                        id="projectGalleryNext" aria-label="Next project image">
+                        &rarr;
+                    </button>
+
+                    <p class="project-gallery__counter" id="projectGalleryCounter" aria-live="polite">0 / 0</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="project-content section">
+            <div class="container container--narrow">
+                <div class="project-heading">
+                    <h1 class="project-title" id="projectTitle">Project</h1>
+                    <p class="project-category" id="projectCategory"></p>
+                </div>
+
+                <div class="project-copy">
+                    <section class="project-copy__section">
+                        <h2>Summary</h2>
+                        <p id="projectSummary"></p>
+                    </section>
+
+                    <section class="project-copy__section">
+                        <h2>Challenge</h2>
+                        <p id="projectChallenge"></p>
+                    </section>
+
+                    <section class="project-copy__section">
+                        <h2>Solution</h2>
+                        <p id="projectSolution"></p>
+                    </section>
+                </div>
+
+                <div class="project-meta">
+                    <section class="project-meta__group">
+                        <h2>Role</h2>
+                        <ul id="projectRole"></ul>
+                    </section>
+
+                    <section class="project-meta__group">
+                        <h2>Deliverables</h2>
+                        <ul id="projectDeliverables"></ul>
+                    </section>
+
+                    <section class="project-meta__group">
+                        <h2>Software</h2>
+                        <ul id="projectSoftware"></ul>
+                    </section>
+
+                    <section class="project-meta__group">
+                        <h2>Tags</h2>
+                        <ul class="project-tags" id="projectTags"></ul>
+                    </section>
+                </div>
+
+                <div class="project-pdf" id="projectPdf"></div>
+
+                <a href="index.html#projects" class="project-back-link" id="projectBackLink">&larr; Back to Projects</a>
+            </div>
+        </section>
+    </main>
+
+    <script type="module" src="assets/js/project-page.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,40 @@
+{
+  "id": "vampirs",
+  "title": "Vampirs",
+  "slug": "vampirs",
+  "category": "Music Campaign",
+  "summary": "Dark promotional visual direction for a music release, designed for streaming platforms, social media, and digital campaign use.",
+  "coverImage": "image1.png",
+  "gallery": [
+    "image1.png",
+    "image2.png"
+  ],
+  "challenge": "Create a distinctive visual mood that supports the music identity and works across compact digital placements.",
+  "solution": "Designed atmospheric artwork and promotional layouts with strong contrast, focused composition, and a consistent release identity.",
+  "role": [
+    "Art Direction",
+    "Cover Artwork",
+    "Social Media Design",
+    "Campaign Design"
+  ],
+  "deliverables": [
+    "Cover Artwork",
+    "Streaming Assets",
+    "Social Media Visuals",
+    "Promotional Layouts"
+  ],
+  "software": [
+    "Adobe Photoshop",
+    "Adobe Illustrator"
+  ],
+  "tags": [
+    "Music",
+    "Artwork",
+    "Campaign",
+    "Digital Design"
+  ],
+  "featured": true,
+  "order": 8,
+  "status": "published",
+  "pdf": null
+}

@@ -1,0 +1,37 @@
+{
+  "id": "gata",
+  "title": "Gata",
+  "slug": "gata",
+  "category": "Brand Campaign",
+  "summary": "Clean promotional campaign for a retail brand focused on clarity, product visibility, and consistent social media presentation.",
+  "coverImage": "image1.png",
+  "gallery": [
+    "image1.png"
+  ],
+  "challenge": "Build a flexible campaign style that can support product promotion while keeping the brand visually simple and recognizable.",
+  "solution": "Created a practical visual direction using clear hierarchy, balanced spacing, and reusable layouts for digital communication.",
+  "role": [
+    "Campaign Design",
+    "Social Media Design",
+    "Visual Direction"
+  ],
+  "deliverables": [
+    "Social Media Assets",
+    "Campaign Layouts",
+    "Promotional Visuals"
+  ],
+  "software": [
+    "Adobe Photoshop",
+    "Adobe Illustrator"
+  ],
+  "tags": [
+    "Retail",
+    "Campaign",
+    "Social Media",
+    "Brand Design"
+  ],
+  "featured": true,
+  "order": 3,
+  "status": "published",
+  "pdf": null
+}

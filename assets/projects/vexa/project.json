@@ -1,0 +1,48 @@
+{
+  "id": "vexa",
+  "title": "Vexa",
+  "slug": "vexa",
+  "category": "Brand Identity",
+  "summary": "Modern digital brand identity designed with a clean visual system, flexible layouts, and a professional technology-focused tone.",
+  "coverImage": "image1.png",
+  "gallery": [
+    "image1.png",
+    "image2.png",
+    "image3.png",
+    "image4.png",
+    "image5.png",
+    "image6.png",
+    "image7.png",
+    "image8.png"
+  ],
+  "challenge": "Create a scalable identity that can support a digital product brand across presentation, marketing, and interface-adjacent visuals.",
+  "solution": "Built a clean identity system with consistent typography, structured compositions, and adaptable brand assets for multiple touchpoints.",
+  "role": [
+    "Brand Strategy",
+    "Logo Design",
+    "Visual Identity",
+    "Brand Presentation",
+    "Digital Design"
+  ],
+  "deliverables": [
+    "Logo Design",
+    "Brand Identity",
+    "Visual System",
+    "Digital Assets",
+    "Mockup Presentation"
+  ],
+  "software": [
+    "Adobe Illustrator",
+    "Adobe Photoshop"
+  ],
+  "tags": [
+    "Branding",
+    "Technology",
+    "Digital Product",
+    "Identity Design"
+  ],
+  "featured": true,
+  "order": 10,
+  "status": "published",
+  "pdf": null
+}

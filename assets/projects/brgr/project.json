@@ -1,0 +1,38 @@
+{
+  "id": "brgr",
+  "title": "BRGR",
+  "slug": "brgr",
+  "category": "Advertising Campaign",
+  "summary": "Bold visual campaign for a burger brand built around appetite appeal, strong contrast, and direct product-focused communication.",
+  "coverImage": "image1.png",
+  "gallery": [
+    "image1.png"
+  ],
+  "challenge": "Create a simple campaign direction that makes the product feel memorable, energetic, and easy to recognize across digital placements.",
+  "solution": "Developed a punchy visual system using close-up food imagery, strong typography, and a compact layout style for social and promotional use.",
+  "role": [
+    "Art Direction",
+    "Campaign Design",
+    "Social Media Design",
+    "Visual Layout"
+  ],
+  "deliverables": [
+    "Campaign Visuals",
+    "Social Media Assets",
+    "Promotional Layouts"
+  ],
+  "software": [
+    "Adobe Photoshop",
+    "Adobe Illustrator"
+  ],
+  "tags": [
+    "Advertising",
+    "Food",
+    "Social Media",
+    "Campaign"
+  ],
+  "featured": true,
+  "order": 2,
+  "status": "published",
+  "pdf": null
+}

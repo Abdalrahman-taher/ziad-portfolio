@@ -1,0 +1,49 @@
+{
+  "id": "basata",
+  "title": "Basata",
+  "slug": "basata",
+  "category": "Brand Identity",
+  "summary": "Contemporary Arabic streetwear brand identity that combines modern fashion with authentic Arabic culture through a clean and premium visual system.",
+  "coverImage": "image1.jpg",
+  "gallery": [
+    "image1.jpg",
+    "image2.png"
+  ],
+  "challenge": "Design a fashion brand that combines Arabic identity with modern streetwear culture without relying on traditional visual cliches.",
+  "solution": "Developed a bold visual identity using custom Arabic typography, minimal layouts, and a scalable branding system for digital and print.",
+  "role": [
+    "Brand Strategy",
+    "Naming",
+    "Logo Design",
+    "Arabic Typography",
+    "Visual Identity",
+    "Brand Guidelines",
+    "Social Media Design",
+    "Packaging Presentation"
+  ],
+  "deliverables": [
+    "Logo Design",
+    "Brand Identity",
+    "Typography System",
+    "Color Palette",
+    "Brand Guidelines",
+    "Social Media Assets",
+    "Packaging Concepts",
+    "Mockup Presentation"
+  ],
+  "software": [
+    "Adobe Illustrator",
+    "Adobe Photoshop"
+  ],
+  "tags": [
+    "Branding",
+    "Fashion",
+    "Arabic Typography",
+    "Streetwear",
+    "Identity Design"
+  ],
+  "featured": true,
+  "order": 1,
+  "status": "published",
+  "pdf": null
+}

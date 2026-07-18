@@ -1,0 +1,48 @@
+{
+  "id": "velox",
+  "title": "Velox",
+  "slug": "velox",
+  "category": "Brand Identity",
+  "summary": "Performance-focused brand identity with a sharp visual system, energetic layouts, and a modern mobility-inspired direction.",
+  "coverImage": "image1.png",
+  "gallery": [
+    "image1.png",
+    "image2.png",
+    "image3.png",
+    "image4.png",
+    "image5.png",
+    "image6.png",
+    "image7.png",
+    "image8.png"
+  ],
+  "challenge": "Build a visual identity that communicates speed, confidence, and technical precision across multiple brand applications.",
+  "solution": "Developed a sleek identity system using dynamic composition, bold typography, and flexible mockups for a complete brand presentation.",
+  "role": [
+    "Brand Strategy",
+    "Logo Design",
+    "Visual Identity",
+    "Brand Applications",
+    "Presentation Design"
+  ],
+  "deliverables": [
+    "Logo Design",
+    "Brand Identity",
+    "Visual System",
+    "Brand Mockups",
+    "Presentation Assets"
+  ],
+  "software": [
+    "Adobe Illustrator",
+    "Adobe Photoshop"
+  ],
+  "tags": [
+    "Branding",
+    "Automotive",
+    "Mobility",
+    "Identity Design"
+  ],
+  "featured": true,
+  "order": 9,
+  "status": "published",
+  "pdf": null
+}
