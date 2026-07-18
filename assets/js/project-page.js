@@ -1,5 +1,6 @@
 import { getProjectBySlug } from "./project-loader.js";
 
+const siteUrl = "https://ziad-portfolio.pages.dev";
 const titleElement = document.getElementById("projectTitle");
 const categoryElement = document.getElementById("projectCategory");
 const summaryElement = document.getElementById("projectSummary");
@@ -44,6 +45,36 @@ function renderList(element, items, itemClass = "") {
     });
 }
 
+function updateMeta(selector, value, attribute = "content") {
+    const element = document.querySelector(selector);
+
+    if (element && value) {
+        element.setAttribute(attribute, value);
+    }
+}
+
+function updateProjectMetadata(project) {
+    const pageTitle = `${project.title} | ${project.category} Case Study | Ziad Ahmed`;
+    const pageDescription = project.summary;
+    const pageUrl = `${siteUrl}/project.html?slug=${encodeURIComponent(project.slug || project.id)}`;
+    const imageUrl = project.coverImage.startsWith("http")
+        ? project.coverImage
+        : `${siteUrl}/${project.coverImage}`;
+
+    document.title = pageTitle;
+    updateMeta('meta[name="description"]', pageDescription);
+    updateMeta('link[rel="canonical"]', pageUrl, "href");
+    updateMeta('meta[property="og:title"]', pageTitle);
+    updateMeta('meta[property="og:description"]', pageDescription);
+    updateMeta('meta[property="og:url"]', pageUrl);
+    updateMeta('meta[property="og:image"]', imageUrl);
+    updateMeta('meta[property="og:image:alt"]', `${project.title} ${project.category} case study cover`);
+    updateMeta('meta[name="twitter:title"]', pageTitle);
+    updateMeta('meta[name="twitter:description"]', pageDescription);
+    updateMeta('meta[name="twitter:image"]', imageUrl);
+    updateMeta('meta[name="twitter:image:alt"]', `${project.title} ${project.category} case study cover`);
+}
+
 function updateGalleryImage() {
     if (!galleryImageElement || !galleryCounterElement) return;
 
@@ -59,7 +90,7 @@ function updateGalleryImage() {
     const title = titleElement?.textContent || "Project";
 
     galleryImageElement.src = imagePath;
-    galleryImageElement.alt = `${title} image ${currentGalleryIndex + 1}`;
+    galleryImageElement.alt = `${title} portfolio case study image ${currentGalleryIndex + 1}`;
     galleryCounterElement.textContent = `${currentGalleryIndex + 1} / ${galleryImages.length}`;
 }
 
@@ -138,7 +169,7 @@ function showProjectNotFound() {
 }
 
 function renderProject(project) {
-    document.title = project.title;
+    updateProjectMetadata(project);
 
     setText(titleElement, project.title);
     setText(categoryElement, project.category);

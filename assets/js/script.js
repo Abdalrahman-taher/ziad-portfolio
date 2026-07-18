@@ -333,7 +333,7 @@ async function initializeApp() {
     optimizePerformance();
 
     // أولاً أنشئ الـ Cards
-    await renderProjects();
+    renderProjects();
 
     if (window.location.hash === '#projects') {
         const projectsSection = document.getElementById('projects');
@@ -358,67 +358,89 @@ async function initializeApp() {
 // LOAD PROJECTS
 // ========================================
 
-async function renderProjects() {
+function renderProjects() {
 
     const grid = document.getElementById("projectsGrid");
 
     if (!grid) return;
 
-    grid.innerHTML = "";
-
-    const { loadProjects } = await projectLoaderPromise;
-    const projects = await loadProjects();
-    const homepageOrder = [
-        "Basata",
-        "Velox",
-        "Nexora",
-        "Nexora App",
-        "Vexa",
-        "Vampirs",
-        "Pretty Lady",
-        "BRGR",
-        "Red Bull"
+    const homepageProjects = [
+        { folder: "basata" },
+        { folder: "velox" },
+        { folder: "nexora" },
+        { folder: "nexora-app" },
+        { folder: "vexa" },
+        { folder: "vampirs" },
+        { folder: "pretty-lady" },
+        { folder: "brgr" },
+        { folder: "red-bull" }
     ];
-    const orderedProjects = homepageOrder
-        .map(title => projects.find(project => project.title === title))
-        .filter(Boolean);
 
-    orderedProjects.forEach((project, index) => {
+    grid.innerHTML = homepageProjects.map(({ folder }) => `
 
-        grid.innerHTML += `
-
-        <article class="project-card" data-id="${project.id}" data-hover>
+        <article class="project-card" data-id="${folder}" data-hover aria-busy="true">
 
             <div class="project-card__image-wrapper">
-
-                <img
-                    src="${project.coverImage}"
-                    alt="${project.title}"
-                    loading="${index === 0 ? 'eager' : 'lazy'}"
-                    class="project-card__image">
-
+                <div class="placeholder-pattern"></div>
             </div>
 
             <div class="project-card__info">
-
-                <span class="project-card__category">
-                    ${project.category}
-                </span>
-
-                <h3 class="project-card__title">
-                    ${project.title}
-                </h3>
-
-                <p class="project-card__statement">
-                    ${project.summary}
-                </p>
-
+                <span class="project-card__category">&nbsp;</span>
+                <h3 class="project-card__title">&nbsp;</h3>
+                <p class="project-card__statement">&nbsp;</p>
             </div>
 
         </article>
 
-        `;
+    `).join("");
 
+    projectLoaderPromise.then(({ loadProject }) => {
+        const renderProjectCard = (project, index, folder) => {
+            if (!project) return;
+
+            const card = grid.querySelector(`[data-id="${folder}"]`);
+
+            if (!card) return;
+
+            card.removeAttribute("aria-busy");
+            card.innerHTML = `
+
+                <div class="project-card__image-wrapper">
+
+                    <img
+                        src="${project.coverImage}"
+                        alt="${project.title} ${project.category} portfolio project cover"
+                        loading="${index === 0 ? 'eager' : 'lazy'}"
+                        decoding="async"
+                        class="project-card__image">
+
+                </div>
+
+                <div class="project-card__info">
+
+                    <span class="project-card__category">
+                        ${project.category}
+                    </span>
+
+                    <h3 class="project-card__title">
+                        ${project.title}
+                    </h3>
+
+                    <p class="project-card__statement">
+                        ${project.summary}
+                    </p>
+
+                </div>
+
+            `;
+        };
+
+        loadProject(homepageProjects[0].folder)
+            .then(project => renderProjectCard(project, 0, homepageProjects[0].folder));
+
+        homepageProjects.slice(1).forEach(({ folder }, index) => {
+            loadProject(folder).then(project => renderProjectCard(project, index + 1, folder));
+        });
     });
 
 }
