@@ -326,7 +326,7 @@ function renderProjects() {
         { folder: "nexora-app", width: 375, height: 888 },
         { folder: "vexa", width: 842, height: 596 },
         { folder: "vampirs", width: 1254, height: 1254 },
-        { folder: "pretty-lady", width: 1254, height: 1254 },
+        { folder: "pretty-lady", width: 1024, height: 1024 },
         { folder: "brgr", width: 2048, height: 1536 },
         { folder: "red-bull", width: 1241, height: 1268 }
     ];

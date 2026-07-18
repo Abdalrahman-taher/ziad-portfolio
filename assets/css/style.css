@@ -1018,6 +1018,85 @@ button {
     padding: 0.35rem 0.75rem;
 }
 
+.project-scroll-indicator {
+    position: absolute;
+    left: 50%;
+    bottom: var(--space-md);
+    z-index: 3;
+    display: inline-flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.55rem;
+    color: var(--text-secondary);
+    opacity: 0.86;
+    transform: translateX(-50%);
+    transition: opacity var(--transition-fast), transform var(--transition-fast), color var(--transition-fast);
+    animation: project-scroll-float 2.4s ease-in-out infinite;
+}
+
+.project-scroll-indicator:hover {
+    color: var(--accent);
+    opacity: 1;
+}
+
+.project-scroll-indicator.is-hidden {
+    opacity: 0;
+    pointer-events: none;
+    transform: translate(-50%, 0.75rem);
+}
+
+.project-scroll-indicator__label {
+    font-family: var(--font-mono);
+    font-size: 0.7rem;
+    text-transform: uppercase;
+    letter-spacing: 0;
+}
+
+.project-scroll-indicator__mouse {
+    width: 1.35rem;
+    height: 2.2rem;
+    border: 1px solid currentColor;
+    border-radius: 999px;
+    display: flex;
+    justify-content: center;
+    padding-top: 0.45rem;
+}
+
+.project-scroll-indicator__dot {
+    width: 0.25rem;
+    height: 0.25rem;
+    border-radius: 50%;
+    background-color: currentColor;
+    animation: project-scroll-dot 1.6s ease-in-out infinite;
+}
+
+@keyframes project-scroll-float {
+    0%,
+    100% {
+        translate: 0 0;
+    }
+
+    50% {
+        translate: 0 -0.45rem;
+    }
+}
+
+@keyframes project-scroll-dot {
+    0% {
+        opacity: 0;
+        transform: translateY(0);
+    }
+
+    35% {
+        opacity: 1;
+    }
+
+    100% {
+        opacity: 0;
+        transform: translateY(0.7rem);
+    }
+}
+
 .project-heading {
     margin-bottom: var(--space-xl);
 }
@@ -1122,6 +1201,10 @@ button {
     .project-gallery__button {
         width: 2.5rem;
         height: 2.5rem;
+    }
+
+    .project-scroll-indicator {
+        bottom: var(--space-sm);
     }
 
     .project-meta {

@@ -1,7 +1,7 @@
 import { getProjectBySlug } from "./project-loader.js";
 
 const siteUrl = "https://ziad-portfolio.pages.dev";
-const defaultDescription = "Project case study from Ziad Ahmed's creative brand design portfolio, including identity, visual communication, and campaign work.";
+const defaultDescription = "Project case study from Ziad Madian's creative brand design portfolio, including identity, visual communication, and campaign work.";
 const imageDimensions = {
     "assets/projects/basata/image1_result.webp": [941, 1672],
     "assets/projects/basata/image2_result.webp": [1536, 2752],
@@ -17,7 +17,6 @@ const imageDimensions = {
     "assets/projects/nexora-app/image4_result.webp": [375, 888],
     "assets/projects/nexora-app/image5_result.webp": [375, 888],
     "assets/projects/nexora-app/image6_result.webp": [375, 888],
-    "assets/projects/pretty-lady/image1_result.webp": [1254, 1254],
     "assets/projects/pretty-lady/image2_result.webp": [1024, 1024],
     "assets/projects/pretty-lady/image3_result.webp": [896, 1195],
     "assets/projects/red-bull/image1_result.webp": [1241, 1268],
@@ -30,7 +29,6 @@ const imageDimensions = {
     "assets/projects/velox/image4_result.webp": [1440, 810],
     "assets/projects/velox/image5_result.webp": [1440, 810],
     "assets/projects/velox/image6_result.webp": [1440, 810],
-    "assets/projects/velox/image7_result.webp": [843, 596],
     "assets/projects/velox/image8_result.webp": [1440, 810],
     "assets/projects/vexa/image1_result.webp": [842, 596],
     "assets/projects/vexa/image2_result.webp": [843, 596],
@@ -39,7 +37,8 @@ const imageDimensions = {
     "assets/projects/vexa/image5_result.webp": [843, 596],
     "assets/projects/vexa/image6_result.webp": [843, 596],
     "assets/projects/vexa/image7_result.webp": [843, 596],
-    "assets/projects/vexa/image8_result.webp": [843, 596]
+    "assets/projects/vexa/image8_result.webp": [843, 596],
+    "assets/projects/vexa/image9_result.webp": [843, 596]
 };
 
 const titleElement = document.getElementById("projectTitle");
@@ -58,6 +57,8 @@ const galleryCounterElement = document.getElementById("projectGalleryCounter");
 const galleryPrevButton = document.getElementById("projectGalleryPrev");
 const galleryNextButton = document.getElementById("projectGalleryNext");
 const projectBackLink = document.getElementById("projectBackLink");
+const projectContentElement = document.getElementById("projectContent");
+const projectScrollIndicator = document.getElementById("projectScrollIndicator");
 
 let galleryImages = [];
 let currentGalleryIndex = 0;
@@ -72,7 +73,7 @@ function setMetaAttribute(selector, attribute, value) {
 }
 
 function updateProjectMetadata(project) {
-    const title = `${project.title} | Ziad Ahmed Creative Brand Designer`;
+    const title = `${project.title} | Ziad Madian Creative Brand Designer`;
     const description = project.summary || defaultDescription;
     const canonicalUrl = `${siteUrl}/project.html?slug=${encodeURIComponent(project.slug)}`;
     const imageUrl = project.coverImage.startsWith("http")
@@ -199,6 +200,16 @@ galleryElement?.addEventListener("touchend", event => {
 projectBackLink?.addEventListener("click", () => {
     sessionStorage.setItem("returnToProjects", "true");
 });
+
+projectScrollIndicator?.addEventListener("click", () => {
+    projectContentElement?.scrollIntoView({ behavior: "smooth", block: "start" });
+});
+
+window.addEventListener("scroll", () => {
+    if (!projectScrollIndicator) return;
+
+    projectScrollIndicator.classList.toggle("is-hidden", window.scrollY > 24);
+}, { passive: true });
 
 function showProjectNotFound() {
     document.title = "Project not found";
