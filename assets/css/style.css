@@ -282,10 +282,10 @@ button {
     content: '';
     position: absolute;
     inset: 0;
-    background-image: linear-gradient(rgba(10, 10, 10, 0.72), rgba(10, 10, 10, 0.9)), url('../images/profile/pesonal-cove-photo_result.webp');
+    background-image: linear-gradient(rgba(10, 10, 10, 0.48), rgba(10, 10, 10, 0.68)), url('../images/profile/pesonal-cove-photo_result.webp');
     background-size: cover;
     background-position: center;
-    opacity: 0.28;
+    opacity: 0.42;
     pointer-events: none;
 }
 
