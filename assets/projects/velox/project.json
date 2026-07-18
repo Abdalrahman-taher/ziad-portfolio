@@ -7,13 +7,13 @@
   "coverImage": "image1.png",
   "gallery": [
     "image1.png",
-    "image2.png",
-    "image3.png",
-    "image4.png",
-    "image5.png",
-    "image6.png",
+    "image2_result.webp",
+    "image3_result.webp",
+    "image4_result.webp",
+    "image5_result.webp",
+    "image6_result.webp",
     "image7.png",
-    "image8.png"
+    "image8_result.webp"
   ],
   "challenge": "Build a visual identity that communicates speed, confidence, and technical precision across multiple brand applications.",
   "solution": "Developed a sleek identity system using dynamic composition, bold typography, and flexible mockups for a complete brand presentation.",

@@ -4,14 +4,14 @@
   "slug": "nexora-app",
   "category": "UI/UX Design",
   "summary": "Digital product interface concept for Nexora focused on clean screens, practical flows, and a polished technology experience.",
-  "coverImage": "image1.png",
+  "coverImage": "image1_result.webp",
   "gallery": [
-    "image1.png",
-    "image2.png",
-    "image3.png",
-    "image4.png",
-    "image5.png",
-    "image6.png"
+    "image1_result.webp",
+    "image2_result.webp",
+    "image3_result.webp",
+    "image4_result.webp",
+    "image5_result.webp",
+    "image6_result.webp"
   ],
   "challenge": "Translate the Nexora brand direction into an interface system that feels clear, usable, and consistent across app screens.",
   "solution": "Designed a focused UI direction with structured components, readable layouts, and a calm product experience for core app interactions.",

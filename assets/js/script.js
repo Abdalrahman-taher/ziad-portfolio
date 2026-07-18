@@ -383,7 +383,7 @@ async function renderProjects() {
         .map(title => projects.find(project => project.title === title))
         .filter(Boolean);
 
-    orderedProjects.forEach(project => {
+    orderedProjects.forEach((project, index) => {
 
         grid.innerHTML += `
 
@@ -394,6 +394,7 @@ async function renderProjects() {
                 <img
                     src="${project.coverImage}"
                     alt="${project.title}"
+                    loading="${index === 0 ? 'eager' : 'lazy'}"
                     class="project-card__image">
 
             </div>
