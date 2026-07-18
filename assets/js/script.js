@@ -270,46 +270,6 @@
     }
 
     // ========================================
-    // IMAGE LAZY LOADING PREPARATION
-    // ========================================
-    function prepareImageReplacement() {
-        const imagePlaceholders = document.querySelectorAll('[data-replace="image"]');
-        
-        imagePlaceholders.forEach(placeholder => {
-            // Add class for developer reference
-            placeholder.classList.add('image-placeholder');
-            
-            // Developer note: Replace these divs with actual <img> tags
-            // Example:
-            // const img = document.createElement('img');
-            // img.src = 'path/to/image.jpg';
-            // img.alt = 'Project description';
-            // placeholder.parentNode.replaceChild(img, placeholder);
-        });
-    }
-
-    // ========================================
-    // TEXT PLACEHOLDER MARKING
-    // ========================================
-    function markTextPlaceholders() {
-        const textPlaceholders = document.querySelectorAll('[data-replace="text"]');
-        
-        textPlaceholders.forEach(placeholder => {
-            placeholder.classList.add('text-placeholder');
-            // Developer can easily find and replace these elements
-        });
-    }
-
-    // ========================================
-    // PERFORMANCE OPTIMIZATION
-    // ========================================
-    function optimizePerformance() {
-        // Use IntersectionObserver for lazy loading images when implemented
-        // Debounce scroll events
-        // Minimize DOM manipulation
-    }
-
-    // ========================================
     // INITIALIZATION
     // ========================================
     function init() {
@@ -328,10 +288,6 @@ async function initializeApp() {
     initNavigation();
     initParallax();
     initSmoothScroll();
-    prepareImageReplacement();
-    markTextPlaceholders();
-    optimizePerformance();
-
     // أولاً أنشئ الـ Cards
     renderProjects();
 
@@ -352,7 +308,6 @@ async function initializeApp() {
     // وبعدها فعل الـ Reveal عليهم
     initScrollReveal();
 
-    console.log('Portfolio template initialized successfully');
 }
 // ========================================
 // LOAD PROJECTS
@@ -365,15 +320,15 @@ function renderProjects() {
     if (!grid) return;
 
     const homepageProjects = [
-        { folder: "basata" },
-        { folder: "velox" },
-        { folder: "nexora" },
-        { folder: "nexora-app" },
-        { folder: "vexa" },
-        { folder: "vampirs" },
-        { folder: "pretty-lady" },
-        { folder: "brgr" },
-        { folder: "red-bull" }
+        { folder: "basata", width: 941, height: 1672 },
+        { folder: "velox", width: 1440, height: 810 },
+        { folder: "nexora", width: 1920, height: 1080 },
+        { folder: "nexora-app", width: 375, height: 888 },
+        { folder: "vexa", width: 842, height: 596 },
+        { folder: "vampirs", width: 1254, height: 1254 },
+        { folder: "pretty-lady", width: 1254, height: 1254 },
+        { folder: "brgr", width: 2048, height: 1536 },
+        { folder: "red-bull", width: 1241, height: 1268 }
     ];
 
     grid.innerHTML = homepageProjects.map(({ folder }) => `
@@ -409,7 +364,9 @@ function renderProjects() {
 
                     <img
                         src="${project.coverImage}"
-                        alt="${project.title} ${project.category} portfolio project cover"
+                        alt="${project.title} ${project.category} project cover"
+                        width="${homepageProjects[index].width}"
+                        height="${homepageProjects[index].height}"
                         loading="${index === 0 ? 'eager' : 'lazy'}"
                         decoding="async"
                         class="project-card__image">

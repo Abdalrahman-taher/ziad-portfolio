@@ -1,19 +1,5 @@
-const projectFolders = [
-    "basata",
-    "brgr",
-    "gata",
-    "nexora",
-    "nexora-app",
-    "pretty-lady",
-    "red-bull",
-    "vampirs",
-    "velox",
-    "vexa"
-];
-
 function normalizeProject(project, folder) {
     if (!project || typeof project !== "object" || Array.isArray(project)) {
-        console.warn(`Invalid project.json in assets/projects/${folder}`);
         return null;
     }
 
@@ -57,7 +43,6 @@ function normalizeProject(project, folder) {
     };
 
     if (!normalized.title || !normalized.category || !normalized.summary || !normalized.coverImage) {
-        console.warn(`Invalid project.json in assets/projects/${folder}`, project);
         return null;
     }
 
@@ -69,27 +54,18 @@ async function loadProject(folder) {
         const response = await fetch(`assets/projects/${folder}/project.json`);
 
         if (!response.ok) {
-            console.warn(`Missing project.json in assets/projects/${folder}`);
             return null;
         }
 
         const project = await response.json();
         return normalizeProject(project, folder);
     } catch (error) {
-        console.warn(`Invalid project.json in assets/projects/${folder}`, error);
         return null;
     }
 }
 
-async function loadProjects() {
-    return (await Promise.all(projectFolders.map(loadProject)))
-        .filter(Boolean)
-        .sort((a, b) => a.order - b.order);
-}
-
 async function getProjectBySlug(slug) {
     if (!slug || typeof slug !== "string") {
-        console.warn("Invalid project slug", slug);
         return null;
     }
 
@@ -97,9 +73,7 @@ async function getProjectBySlug(slug) {
 }
 
 export {
-    projectFolders,
     normalizeProject,
     loadProject,
-    loadProjects,
     getProjectBySlug
 };

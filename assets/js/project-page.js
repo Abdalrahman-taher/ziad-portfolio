@@ -1,6 +1,47 @@
 import { getProjectBySlug } from "./project-loader.js";
 
 const siteUrl = "https://ziad-portfolio.pages.dev";
+const defaultDescription = "Project case study from Ziad Ahmed's creative brand design portfolio, including identity, visual communication, and campaign work.";
+const imageDimensions = {
+    "assets/projects/basata/image1_result.webp": [941, 1672],
+    "assets/projects/basata/image2_result.webp": [1536, 2752],
+    "assets/projects/brgr/image1_result.webp": [2048, 1536],
+    "assets/projects/gata/image1_result.webp": [1086, 1448],
+    "assets/projects/nexora/image1_result.webp": [1920, 1080],
+    "assets/projects/nexora/image2_result.webp": [1920, 1080],
+    "assets/projects/nexora/image3_result.webp": [1920, 1080],
+    "assets/projects/nexora/image5_result.webp": [1920, 1080],
+    "assets/projects/nexora-app/image1_result.webp": [375, 888],
+    "assets/projects/nexora-app/image2_result.webp": [375, 888],
+    "assets/projects/nexora-app/image3_result.webp": [375, 888],
+    "assets/projects/nexora-app/image4_result.webp": [375, 888],
+    "assets/projects/nexora-app/image5_result.webp": [375, 888],
+    "assets/projects/nexora-app/image6_result.webp": [375, 888],
+    "assets/projects/pretty-lady/image1_result.webp": [1254, 1254],
+    "assets/projects/pretty-lady/image2_result.webp": [1024, 1024],
+    "assets/projects/pretty-lady/image3_result.webp": [896, 1195],
+    "assets/projects/red-bull/image1_result.webp": [1241, 1268],
+    "assets/projects/red-bull/image2_result.webp": [1254, 1254],
+    "assets/projects/vampirs/image1_result.webp": [1254, 1254],
+    "assets/projects/vampirs/image2_result.webp": [1672, 941],
+    "assets/projects/velox/image1_result.webp": [1440, 810],
+    "assets/projects/velox/image2_result.webp": [1440, 810],
+    "assets/projects/velox/image3_result.webp": [1440, 810],
+    "assets/projects/velox/image4_result.webp": [1440, 810],
+    "assets/projects/velox/image5_result.webp": [1440, 810],
+    "assets/projects/velox/image6_result.webp": [1440, 810],
+    "assets/projects/velox/image7_result.webp": [843, 596],
+    "assets/projects/velox/image8_result.webp": [1440, 810],
+    "assets/projects/vexa/image1_result.webp": [842, 596],
+    "assets/projects/vexa/image2_result.webp": [843, 596],
+    "assets/projects/vexa/image3_result.webp": [843, 596],
+    "assets/projects/vexa/image4_result.webp": [843, 596],
+    "assets/projects/vexa/image5_result.webp": [843, 596],
+    "assets/projects/vexa/image6_result.webp": [843, 596],
+    "assets/projects/vexa/image7_result.webp": [843, 596],
+    "assets/projects/vexa/image8_result.webp": [843, 596]
+};
+
 const titleElement = document.getElementById("projectTitle");
 const categoryElement = document.getElementById("projectCategory");
 const summaryElement = document.getElementById("projectSummary");
@@ -21,6 +62,36 @@ const projectBackLink = document.getElementById("projectBackLink");
 let galleryImages = [];
 let currentGalleryIndex = 0;
 let touchStartX = 0;
+
+function setMetaAttribute(selector, attribute, value) {
+    const element = document.head.querySelector(selector);
+
+    if (element) {
+        element.setAttribute(attribute, value);
+    }
+}
+
+function updateProjectMetadata(project) {
+    const title = `${project.title} | Ziad Ahmed Creative Brand Designer`;
+    const description = project.summary || defaultDescription;
+    const canonicalUrl = `${siteUrl}/project.html?slug=${encodeURIComponent(project.slug)}`;
+    const imageUrl = project.coverImage.startsWith("http")
+        ? project.coverImage
+        : `${siteUrl}/${project.coverImage}`;
+
+    document.title = title;
+    setMetaAttribute('meta[name="description"]', "content", description);
+    setMetaAttribute('link[rel="canonical"]', "href", canonicalUrl);
+    setMetaAttribute('meta[property="og:title"]', "content", title);
+    setMetaAttribute('meta[property="og:description"]', "content", description);
+    setMetaAttribute('meta[property="og:url"]', "content", canonicalUrl);
+    setMetaAttribute('meta[property="og:image"]', "content", imageUrl);
+    setMetaAttribute('meta[property="og:image:alt"]', "content", `${project.title} ${project.category} case study cover`);
+    setMetaAttribute('meta[name="twitter:title"]', "content", title);
+    setMetaAttribute('meta[name="twitter:description"]', "content", description);
+    setMetaAttribute('meta[name="twitter:image"]', "content", imageUrl);
+    setMetaAttribute('meta[name="twitter:image:alt"]', "content", `${project.title} ${project.category} case study cover`);
+}
 
 function setText(element, value) {
     if (element) {
@@ -45,36 +116,6 @@ function renderList(element, items, itemClass = "") {
     });
 }
 
-function updateMeta(selector, value, attribute = "content") {
-    const element = document.querySelector(selector);
-
-    if (element && value) {
-        element.setAttribute(attribute, value);
-    }
-}
-
-function updateProjectMetadata(project) {
-    const pageTitle = `${project.title} | ${project.category} Case Study | Ziad Ahmed`;
-    const pageDescription = project.summary;
-    const pageUrl = `${siteUrl}/project.html?slug=${encodeURIComponent(project.slug || project.id)}`;
-    const imageUrl = project.coverImage.startsWith("http")
-        ? project.coverImage
-        : `${siteUrl}/${project.coverImage}`;
-
-    document.title = pageTitle;
-    updateMeta('meta[name="description"]', pageDescription);
-    updateMeta('link[rel="canonical"]', pageUrl, "href");
-    updateMeta('meta[property="og:title"]', pageTitle);
-    updateMeta('meta[property="og:description"]', pageDescription);
-    updateMeta('meta[property="og:url"]', pageUrl);
-    updateMeta('meta[property="og:image"]', imageUrl);
-    updateMeta('meta[property="og:image:alt"]', `${project.title} ${project.category} case study cover`);
-    updateMeta('meta[name="twitter:title"]', pageTitle);
-    updateMeta('meta[name="twitter:description"]', pageDescription);
-    updateMeta('meta[name="twitter:image"]', imageUrl);
-    updateMeta('meta[name="twitter:image:alt"]', `${project.title} ${project.category} case study cover`);
-}
-
 function updateGalleryImage() {
     if (!galleryImageElement || !galleryCounterElement) return;
 
@@ -90,7 +131,15 @@ function updateGalleryImage() {
     const title = titleElement?.textContent || "Project";
 
     galleryImageElement.src = imagePath;
-    galleryImageElement.alt = `${title} portfolio case study image ${currentGalleryIndex + 1}`;
+    galleryImageElement.alt = `${title} project gallery image ${currentGalleryIndex + 1}`;
+
+    const dimensions = imageDimensions[imagePath];
+
+    if (dimensions) {
+        galleryImageElement.width = dimensions[0];
+        galleryImageElement.height = dimensions[1];
+    }
+
     galleryCounterElement.textContent = `${currentGalleryIndex + 1} / ${galleryImages.length}`;
 }
 
